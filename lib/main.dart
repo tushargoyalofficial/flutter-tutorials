@@ -1,5 +1,4 @@
-import 'package:find_talent/screens/curved_line_screen/curved_line_screen.dart';
-import 'package:find_talent/screens/welcome/welcome.dart';
+import 'package:find_talent/screens/curved_line_screen/curved_line_animated_screen%20.dart';
 import 'package:find_talent/settings/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,15 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: ftTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CurvedLineScreen(),
+      home: Builder(
+        builder: (BuildContext context) {
+          var screenHeight = MediaQuery.of(context).size.height;
+
+          return CurvedLineAnimatedScreen(
+            screenHeight: screenHeight,
+          );
+        },
+      ),
     );
   }
 }
