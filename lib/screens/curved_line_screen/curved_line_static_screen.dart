@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'clippers/index.dart';
 
-class CurvedLineScreen extends StatelessWidget {
+class CurvedLineStaticScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
