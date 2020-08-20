@@ -39,7 +39,7 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
       CurvedAnimation(
         parent: _animationController,
         curve: Interval(
-          0.2,
+          0.3,
           0.7,
           curve: Curves.easeInOut,
         ),
@@ -50,8 +50,8 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
       CurvedAnimation(
         parent: _animationController,
         curve: Interval(
-          0.35,
-          0.7,
+          0.45,
+          0.75,
           curve: Curves.easeInOut,
         ),
       ),
@@ -61,8 +61,8 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
       CurvedAnimation(
         parent: _animationController,
         curve: Interval(
-          0.5,
-          0.7,
+          0.6,
+          0.8,
           curve: Curves.easeInOut,
         ),
       ),
@@ -84,11 +84,14 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
         value: SystemUiOverlayStyle.light,
         child: Stack(
           children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              color: Color(0xFFCA8777),
+            ),
             AnimatedBuilder(
               animation: _whiteTopClipperAnimation,
-              child: Container(
-                color: Colors.blueGrey,
-              ),
+              child: Container(color: Color(0XFF82B3B9)),
               builder: (_, Widget child) {
                 return ClipPath(
                   clipper: WhiteTopClipper(
@@ -100,9 +103,7 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
             ),
             AnimatedBuilder(
               animation: _greyTopClipperAnimation,
-              child: Container(
-                color: Colors.blue,
-              ),
+              child: Container(color: Color(0xFF285E7A)),
               builder: (_, Widget child) {
                 return ClipPath(
                   clipper: GreyTopClipper(
@@ -114,9 +115,7 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
             ),
             AnimatedBuilder(
               animation: _blueTopClipperAnimation,
-              child: Container(
-                color: Colors.redAccent,
-              ),
+              child: Container(color: Color(0xFF011627)),
               builder: (_, Widget child) {
                 return ClipPath(
                   clipper: BlueTopClipper(

@@ -11,12 +11,12 @@ class WhiteTopClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var path = Path()
-      ..lineTo(0.0, 310.0 + yOffset)
+      ..lineTo(0.0, 510.0 + yOffset)
       ..quadraticBezierTo(
         size.width / 2,
-        310.0 + yOffset,
+        510.0 + yOffset,
         size.width,
-        200.0 + yOffset,
+        400.0 + yOffset,
       )
       ..lineTo(size.width, 0.0)
       ..close();
