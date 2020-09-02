@@ -1,4 +1,5 @@
 import 'package:find_talent/screens/curved_line_screen/index.dart';
+import 'package:find_talent/screens/welcome/welcome.dart';
 import 'package:find_talent/settings/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,11 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: ftTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CurvedScreen(),
+      home: WelcomeScreen(),
+      routes: {
+        '/welcome': (context) => WelcomeScreen(),
+        '/curved': (context) => CurvedScreen(),
+      },
     );
   }
 }

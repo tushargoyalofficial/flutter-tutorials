@@ -29,7 +29,9 @@ class WelcomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () {
+          Navigator.pushNamed(context, '/curved');
+        },
         backgroundColor: Colors.yellow,
         child: Icon(
           Icons.chevron_right,
