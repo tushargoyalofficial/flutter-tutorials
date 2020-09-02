@@ -23,6 +23,12 @@ class WelcomeScreen extends StatelessWidget {
                       decoration: TextDecoration.underline,
                       decorationStyle: TextDecorationStyle.dotted),
                 ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/counter');
+                  },
+                  child: Text('Counter'),
+                )
               ],
             ),
           ),
