@@ -23,13 +23,21 @@ class WelcomeScreen extends StatelessWidget {
                       decoration: TextDecoration.underline,
                       decorationStyle: TextDecorationStyle.dotted),
                 ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/counter');
+                  },
+                  child: Text('Counter'),
+                )
               ],
             ),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () {
+          Navigator.pushNamed(context, '/curved');
+        },
         backgroundColor: Colors.yellow,
         child: Icon(
           Icons.chevron_right,

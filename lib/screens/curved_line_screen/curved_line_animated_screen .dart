@@ -80,6 +80,10 @@ class _CurvedLineAnimatedScreenState extends State<CurvedLineAnimatedScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xFF011627),
+        elevation: 0,
+      ),
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: Stack(
