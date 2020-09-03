@@ -7,7 +7,7 @@ class TabData {
   final MaterialColor color;
 }
 
-const List<TabData> allDestinations = <TabData>[
+const List<TabData> allTabPages = <TabData>[
   TabData('Dashboard', Icons.dashboard, Colors.teal),
   TabData('Search', Icons.search, Colors.cyan),
   TabData('Favorite', Icons.favorite, Colors.orange),
