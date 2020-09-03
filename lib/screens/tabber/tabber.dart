@@ -25,22 +25,36 @@ class TabberScreen extends StatelessWidget {
               spreadRadius: 1.0)
         ]),
         child: BottomNavigationBar(
-            currentIndex: context.watch<TabberProvider>().tabIndex,
-            onTap: (int val) => context.read<TabberProvider>().onTabPress(val),
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                  icon: const Icon(Icons.home),
-                  title: const Text('Home'),
-                  backgroundColor: Colors.blue),
-              BottomNavigationBarItem(
-                  icon: const Icon(Icons.search),
-                  title: const Text('Search'),
-                  backgroundColor: Colors.indigo),
-              BottomNavigationBarItem(
-                  icon: const Icon(Icons.person),
-                  title: const Text('Profile'),
-                  backgroundColor: Colors.orange)
-            ]),
+          currentIndex: context.watch<TabberProvider>().tabIndex,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.pink[100],
+          backgroundColor: Colors.deepPurpleAccent,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.dashboard),
+              title: const Text(
+                'Dashboard',
+                style: TextStyle(height: 1.4),
+              ),
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+                icon: const Icon(Icons.search),
+                title: const Text(
+                  'Search',
+                  style: TextStyle(height: 1.4),
+                ),
+                backgroundColor: Colors.indigo),
+            BottomNavigationBarItem(
+                icon: const Icon(Icons.person),
+                title: const Text(
+                  'Profile',
+                  style: TextStyle(height: 1.4),
+                ),
+                backgroundColor: Colors.orange)
+          ],
+          onTap: (int val) => context.read<TabberProvider>().onTabPress(val),
+        ),
       ),
     );
   }
