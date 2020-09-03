@@ -1,8 +1,7 @@
 import 'package:find_talent/screens/counter/counter_provider.dart';
-import 'package:find_talent/screens/counter/couter.dart';
-import 'package:find_talent/screens/curved_line_screen/index.dart';
-import 'package:find_talent/screens/welcome/welcome.dart';
+import 'package:find_talent/screens/tabber/tabber_provider.dart';
 import 'package:find_talent/settings/colors.dart';
+import 'package:find_talent/settings/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,6 +13,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => CounterProvider()),
+        ChangeNotifierProvider(create: (_) => TabberProvider())
       ],
       child: MyApp(),
     ),
@@ -30,17 +30,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.deepOrange,
-        // iconTheme: IconThemeData(color: Colors.white),
-        // accentIconTheme: IconThemeData(color: Colors.grey),
         textTheme: Theme.of(context).textTheme.apply(bodyColor: ftTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelcomeScreen(),
-      routes: {
-        '/welcome': (context) => WelcomeScreen(),
-        '/curved': (context) => CurvedScreen(),
-        '/counter': (context) => CounterScreen()
-      },
+      initialRoute: '/welcome',
+      routes: appRoutes,
     );
   }
 }

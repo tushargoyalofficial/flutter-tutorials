@@ -28,6 +28,12 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/counter');
                   },
                   child: Text('Counter'),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/tabs');
+                  },
+                  child: Text('Tabs'),
                 )
               ],
             ),
