@@ -1,9 +1,12 @@
 import 'package:find_talent/screens/tabber/constants.dart';
+import 'package:find_talent/screens/tabber/tabber_body.dart';
 import 'package:find_talent/screens/tabber/tabber_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class TabberScreen extends StatelessWidget {
+  final _navigatorKey = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,12 +14,7 @@ class TabberScreen extends StatelessWidget {
         title: const Text('Tabber'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[const Text('Tabber screen')],
-        ),
-      ),
+      body: TabberBody(navigatorKey: _navigatorKey),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(boxShadow: [
           BoxShadow(
@@ -33,7 +31,8 @@ class TabberScreen extends StatelessWidget {
                 backgroundColor: destination.color,
                 title: Text(destination.title, style: TextStyle(height: 1.4)));
           }).toList(),
-          onTap: (int val) => context.read<TabberProvider>().onTabPress(val),
+          onTap: (int val) =>
+              context.read<TabberProvider>().onTabPress(val, _navigatorKey),
         ),
       ),
     );
