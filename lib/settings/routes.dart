@@ -1,3 +1,4 @@
+import 'package:find_talent/screens/faded_tabber/faded_tabber.dart';
 import 'package:find_talent/screens/tabber/tabber.dart';
 import 'package:flutter/material.dart';
 import 'package:find_talent/screens/counter/couter.dart';
@@ -9,4 +10,5 @@ Map<String, Widget Function(BuildContext)> appRoutes = <String, WidgetBuilder>{
   '/curved': (context) => CurvedScreen(),
   '/counter': (context) => CounterScreen(),
   '/tabs': (context) => TabberScreen(),
+  '/faded_tabs': (context) => FadedTabber(),
 };
