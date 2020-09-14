@@ -19,6 +19,9 @@ class RootPage extends StatelessWidget {
           onTap: () {
             Navigator.pushNamed(context, "/list");
           },
+          child: Center(
+            child: Text('tap here'),
+          ),
         ),
       ),
     );
