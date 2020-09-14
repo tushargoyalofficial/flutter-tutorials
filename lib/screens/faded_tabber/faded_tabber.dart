@@ -22,7 +22,7 @@ class _FadedTabberState extends State<FadedTabber>
     _faders =
         allDestinations.map<AnimationController>((Destination destination) {
       return AnimationController(
-          vsync: this, duration: Duration(milliseconds: 200));
+          vsync: this, duration: Duration(milliseconds: 400));
     }).toList();
     _faders[_currentIndex].value = 1.0;
     _destinationKeys =

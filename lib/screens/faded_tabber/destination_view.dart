@@ -48,6 +48,7 @@ class _DestinationViewState extends State<DestinationView> {
               case '/text':
                 return TextPage(destination: widget.destination);
             }
+            return null;
           },
         );
       },
