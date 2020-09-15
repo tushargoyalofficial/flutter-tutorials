@@ -34,7 +34,13 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/tabs');
                   },
                   child: Text('Tabs'),
-                )
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/faded_tabs');
+                  },
+                  child: Text('Faded Tabs'),
+                ),
               ],
             ),
           ),
